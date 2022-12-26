@@ -28,7 +28,7 @@ class Static_pages_controllerTest {
 	void shouldGetHome() throws Exception {
 		
 		mockMvc.perform(
-				get("/home")
+				get("/")
 				)
 		.andExpect(status().isOk())
 		.andExpect(view().name("static_pages/home"))

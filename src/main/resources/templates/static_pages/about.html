@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layouts/application}">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Sample-SNS</title>
+  <meta charset="UTF-8" th:remove="tag">
 </head>
 
 <body>
-  <h1>StaticPages#about</h1>
-  <p>Find me in app/views/static_pages/about.html.erb</p>
+
+  <!-- コンテンツの表示 -->
+  <th:block layout:fragment="content">
+    <h1>StaticPages#about</h1>
+    <p>Find me in app/views/static_pages/about.html.erb</p>
+  </th:block>
 
 </body>
 
