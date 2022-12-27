@@ -5,11 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class Static_pages_controller {
+public class StaticPagesController {
 
 	@GetMapping("/")
 	public String showHome(Model model) {
-		model.addAttribute("title", "Home");
 		return "static_pages/home";
 	}
 	

@@ -12,9 +12,10 @@
 </head>
 
 <body>
-
-  <!-- コンテンツの配置 -->
-  <div layout:fragment="content">
+  <div th:replace="layouts/_header :: header"></div>
+  <div class="container">
+    <div layout:fragment="content"></div>
+    <div th:replace="layouts/_footer :: footer"></div>
   </div>
 
   <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
