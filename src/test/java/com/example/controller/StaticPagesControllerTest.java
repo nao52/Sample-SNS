@@ -11,14 +11,14 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.example.helper.TestHelper;
+
 import jakarta.transaction.Transactional;
 
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-class Static_pages_controllerTest {
-	
-	static final String BASE_TITLE = "Sample-SNS";
+class StaticPagesControllerTest extends TestHelper {
 	
 	@Autowired
 	MockMvc mockMvc;
@@ -32,7 +32,7 @@ class Static_pages_controllerTest {
 				)
 		.andExpect(status().isOk())
 		.andExpect(view().name("static_pages/home"))
-		.andExpect(content().string(containsString(BASE_TITLE)));
+		.andExpect(content().string(containsString(fullTitle(""))));
 		
 	}
 	
@@ -45,7 +45,7 @@ class Static_pages_controllerTest {
 				)
 		.andExpect(status().isOk())
 		.andExpect(view().name("static_pages/help"))
-		.andExpect(content().string(containsString("Help | " + BASE_TITLE)));
+		.andExpect(content().string(containsString(fullTitle("Help"))));
 		
 	}
 	
@@ -58,7 +58,7 @@ class Static_pages_controllerTest {
 				)
 		.andExpect(status().isOk())
 		.andExpect(view().name("static_pages/about"))
-		.andExpect(content().string(containsString("About | " + BASE_TITLE)));
+		.andExpect(content().string(containsString(fullTitle("About"))));
 		
 	}
 
