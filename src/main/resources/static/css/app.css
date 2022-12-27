@@ -1,0 +1,61 @@
+/* common */
+
+h1 {
+  text-align: center;
+}
+
+/* header */
+
+header {
+  background-color: black;
+}
+
+#logo {
+  font-size: 32px;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+#logo:hover {
+  background-color: darkgray;
+}
+
+#link_list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+#link_list a {
+  color: lightgrey;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#link_list a:hover {
+  background-color: darkgray;
+}
+
+/* home */
+
+.home {
+  text-align: center;
+  background-color: whitesmoke;
+  height: 300px;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.home h1 {
+  font-size: 60px;
+  margin-top: 40px;
+  font-family: serif;
+}
+
+.home .btn {
+  margin-top: 40px;
+}

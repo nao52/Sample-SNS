@@ -32,7 +32,7 @@ class Static_pages_controllerTest {
 				)
 		.andExpect(status().isOk())
 		.andExpect(view().name("static_pages/home"))
-		.andExpect(content().string(containsString("Home | " + BASE_TITLE)));
+		.andExpect(content().string(containsString(BASE_TITLE)));
 		
 	}
 	

@@ -13,8 +13,20 @@
 
 <body>
 
-  <!-- コンテンツの配置 -->
-  <div layout:fragment="content">
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <a href="#" id="logo">Sample-SNS</a>
+      <nav>
+        <ul id="link_list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Log in</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <div layout:fragment="content"></div>
   </div>
 
   <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>

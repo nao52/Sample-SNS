@@ -9,7 +9,6 @@ public class Static_pages_controller {
 
 	@GetMapping("/")
 	public String showHome(Model model) {
-		model.addAttribute("title", "Home");
 		return "static_pages/home";
 	}
 	
