@@ -12,5 +12,14 @@ public class TestHelper {
 			return BASE_TITLE;
 		}
 	}
+	
+	/** 指定数の文字列を作成 */
+	protected String createString(int num) {
+		var str = "";
+		for (int i = 1; i <= num; i++) {
+			str += "a";
+		}
+		return str;
+	}
 
 }
