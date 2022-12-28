@@ -1,0 +1,14 @@
+spring:
+
+# DataSource
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/sample_sns
+    username: postgres
+    password: postgres
+
+# JPA    
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
